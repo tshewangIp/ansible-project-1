@@ -20,7 +20,7 @@
   become: yes
 
 - name: clone the code
-  command: git clone https://github.com/kapilsthakkar25/space-shooter /var/www/html
+  command: git clone https://github.com/kapilsthakkar25/webapp-repo /var/www/html
   become: yes
 
 - name: restart service httpd
