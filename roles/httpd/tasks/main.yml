@@ -18,7 +18,7 @@
   become: yes
 
 - name: clone the code
-  command: git clone https://github.com/kapilsthakkar25/webapp-repo /var/www/html
+  command: "git clone {{ myrepo }} {{ deploypath }}"
   become: yes
 
 - name: restart service httpd
