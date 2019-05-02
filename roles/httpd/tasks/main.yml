@@ -1,0 +1,24 @@
+---
+# tasks file for httpd
+- name: install the latest version of Apache
+  yum:
+    name: httpd
+    state: latest
+  become: yes
+
+- name: Start service httpd, if not started
+  service:
+    name: httpd
+    state: started
+  become: yes
+
+- name: clone the code
+  command: git clone https://github.com/kapilsthakkar25/space-shooter /var/www/html
+  become: yes
+
+- name: restart service httpd
+  service:
+    name: httpd
+    state: restarted
+  become: yes
+
