@@ -1,5 +1,11 @@
 ---
 # tasks file for httpd
+
+- name: Clean folder
+  file:
+    state: absent
+    path: "/var/www/html/"
+
 - name: install the latest version of Apache
   yum:
     name: httpd
