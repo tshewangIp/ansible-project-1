@@ -8,7 +8,7 @@
 - name: install the latest version of Apache
   yum:
     name: httpd
-    state: {{ state }}
+    state: "{{ state }}"
   become: yes
 
 - name: Start service httpd, if not started
