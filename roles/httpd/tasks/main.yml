@@ -16,17 +16,17 @@
     name: httpd
     state: started
   become: yes
-  ignore_error: true
+  ignore_errors: true
 
 - name: clone the code
   command: "git clone {{ myrepo }} {{ deploypath }}"
   become: yes
-  ignore_error: true
+  ignore_errors: true
 
 - name: restart service httpd
   service:
     name: httpd
     state: restarted
   become: yes
-  ignore_error: true
+  ignore_errors: true
 
