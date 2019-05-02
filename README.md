@@ -29,3 +29,5 @@ $ ansible-playbook -l lab1 -i inventory/hosts.ini site.yml -e "myrepo=https://gi
 
 #### Adhoc command ansible
   $ ansible lab1 -i inventory/hosts.ini -m setup
+  
+  $ ansible lab1 -i inventory/hosts.ini -m ping
