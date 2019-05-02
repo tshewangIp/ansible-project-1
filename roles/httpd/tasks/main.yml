@@ -2,9 +2,7 @@
 # tasks file for httpd
 
 - name: Clean folder
-  file:
-    state: absent
-    path: "/var/www/html"
+  command: rm -rf /var/www/html
   become: yes
 
 - name: install the latest version of Apache
