@@ -14,3 +14,11 @@ $ cd ansible-project
 $ ansible-playbook -i inventory/hosts.ini ping.yml
 
 $ ansible-playbook -i inventory/hosts.ini site.yml
+
+$  ansible-playbook -l lab1 -i inventory/hosts.ini site.yml -e "state=absent"
+
+$  ansible-playbook -l lab1 -i inventory/hosts.ini site.yml -e "state=present"
+
+$ ansible-playbook -l lab1 -i inventory/hosts.ini site.yml -e "myrepo=https://github.com/kapilsthakkar25/space-shooter"
+ 
+$ ansible-playbook -l lab1 -i inventory/hosts.ini site.yml -e "myrepo=https://github.com/kapilsthakkar25/webapp-repo"
