@@ -25,3 +25,7 @@ $ ansible-playbook -l lab1 -i inventory/hosts.ini site.yml -e "myrepo=https://gi
 
 > to download role on your current directory
 >> $ ansible-galaxy install --roles-path ./roles/ geerlingguy.nginx
+
+
+#### Adhoc command ansible
+  $ ansible lab1 -i inventory/hosts.ini -m setup
