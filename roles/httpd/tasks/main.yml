@@ -4,7 +4,7 @@
 - name: Clean folder
   file:
     state: absent
-    path: "/var/www/html/"
+    path: "/var/www/html"
 
 - name: install the latest version of Apache
   yum:
