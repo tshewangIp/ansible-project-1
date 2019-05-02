@@ -1,0 +1,11 @@
+---
+- hosts: all
+  serial: 1
+  gather_facts: false
+
+  tasks:
+    - name: reboot instance
+      reboot:
+        reboot_timeout: "600"
+      become: yes
+      ignore_errors: true
